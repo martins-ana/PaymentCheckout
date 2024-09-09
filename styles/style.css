@@ -1,0 +1,33 @@
+body {
+  color: #0a0d13;
+  display: flex;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 400;
+  padding-top: 64px;
+}
+
+.checkoutSection {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  max-width: 512px;
+  width: 100%;
+}
+
+.titlePayment {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.titlePayWith {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.paymentMethods {
+  display: flex;
+  gap: 16px;
+}
