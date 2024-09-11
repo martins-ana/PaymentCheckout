@@ -15,7 +15,10 @@
   </head>
   <body>
     <section class="checkoutSection">
-      <h1 class="titlePayment">Payment</h1>
+      <div class="titleDivisor">
+        <h1 class="titles">Payment</h1>
+        <hr class="divisor" />
+      </div>
       <form id="paymentForm">
         <h2 class="titlePayWith">Pay with:</h2>
         <div class="paymentMethods">
@@ -55,6 +58,42 @@
         </p>
       </form>
     </section>
-    <section class="checkoutSection"></section>
+    <section class="checkoutSection">
+      <div class="titleDivisor">
+        <h2 class="titles">Order Summary</h2>
+        <hr class="divisor" />
+      </div>
+      <div class="product">
+        <img src="./images/taxmaxLeatherBag.png" alt="Taxmax Leather Bag image" />
+        <div class="productContainer">
+          <div class="productInfo">
+            <h3>Taxmax Leather Bag</h3>
+            <p>$49.80</p>
+          </div>
+          <div class="productInfo elementsGray">
+            <p>Brown Vegan Leather</p>
+            <p>Qty: 2</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <label for="discountCode">Gift or discount code</label>
+        <input
+          type="text"
+          id="discountCode"
+          placeholder="Gift or discount code"
+          required
+        />
+        <button type="button">Apply</button>
+      </div>
+      <div>
+        <p>Subtotal: $49.80</p>
+        <p>Shipping: $7.24</p>
+      </div>
+      <div>
+        <p>Total: $59.28</p>
+        <p class="elementsGray">Including $2.24 in taxes</p>
+      </div>
+    </section>
   </body>
 </html>
