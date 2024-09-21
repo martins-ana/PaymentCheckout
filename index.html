@@ -19,43 +19,86 @@
         <h1 class="titles">Payment</h1>
         <hr class="divisor" />
       </div>
-      <form id="paymentForm">
-        <h2 class="titlePayWith">Pay with:</h2>
-        <div class="paymentMethods">
-          <label for="Card">
-            <input type="radio" name="selectPaymentMethods" id="Card" required />
-            Card
-          </label>
-          <label for="Bank">
-            <input type="radio" name="selectPaymentMethods" id="Bank" required />
-            Bank
-          </label>
-          <label for="Transfer">
-            <input type="radio" name="selectPaymentMethods" id="Transfer" required />
-            Transfer
-          </label>
+      <form id="paymentForm" class="checkoutForm">
+        <div class="inputContainer">
+          <h2 class="titlePayWith">Pay with:</h2>
+          <div class="paymentMethods">
+            <label for="Card">
+              <input
+                type="radio"
+                class="radio"
+                checked
+                name="selectPaymentMethods"
+                id="Card"
+                required
+              />
+              Card
+            </label>
+            <label for="Bank">
+              <input
+                type="radio"
+                class="radio"
+                name="selectPaymentMethods"
+                id="Bank"
+                required
+              />
+              Bank
+            </label>
+            <label for="Transfer">
+              <input
+                type="radio"
+                class="radio"
+                name="selectPaymentMethods"
+                id="Transfer"
+                required
+              />
+              Transfer
+            </label>
+          </div>
         </div>
-        <div>
-          <label for="cardNumber">Card Number:</label>
-          <input type="text" id="cardNumber" placeholder="XXXX-XXXX-XXXX-XXXX" required />
+
+        <div class="cardInfosContainer">
+          <div class="inputContainer">
+            <label for="cardNumber">Card Number</label>
+            <input
+              type="text"
+              id="cardNumber"
+              class="input"
+              placeholder="1234  5678  9101  1121"
+              required
+            />
+          </div>
+          <div class="inputGroup">
+            <div class="inputContainer">
+              <label for="expiryDate">Expiration Date</label>
+              <input
+                type="text"
+                id="expiryDate"
+                class="input"
+                placeholder="MM/YY"
+                required
+              />
+            </div>
+            <div class="inputContainer">
+              <label for="cvv">CVV</label>
+              <input type="text" id="cvv" class="input" placeholder="123" required />
+            </div>
+          </div>
+
+          <div class="checkboxContainer elementsGray">
+            <input type="checkbox" id="save" class="checkbox" />
+            <label for="save">Save Card Details</label>
+          </div>
         </div>
-        <div>
-          <label for="expiryDate">Expiration Date:</label>
-          <input type="text" id="expiryDate" placeholder="MM/YY" required />
+
+        <div class="descriptionContainer">
+          <button type="submit" id="submitButton" class="button">Pay</button>
+          <p class="elementsGray descriptionText">
+            Your personal data will be used to process your order, support your experience
+            throughout this website, and for other purposes described in our privacy
+            policy.
+          </p>
         </div>
-        <div>
-          <label for="cvv">CVV:</label>
-          <input type="text" id="cvv" placeholder="XXX" required />
-        </div>
-        <div>
-          <input type="checkbox" id="save" />
-          <label for="save">Save Card Details:</label>
-        </div>
-        <button type="submit" id="submitButton">Pay</button>
-        <p>
-          Your personal data will be used to process your order, support your experience
-          throughout this website, and for other purposes described in our privacy policy.
-        </p>
       </form>
     </section>
     <section class="checkoutSection">
@@ -76,23 +119,32 @@
           </div>
         </div>
       </div>
-      <div>
-        <label for="discountCode">Gift or discount code</label>
+      <hr class="divisor" />
+
+      <div class="inputGroup">
         <input
           type="text"
           id="discountCode"
+          class="input"
           placeholder="Gift or discount code"
           required
         />
-        <button type="button">Apply</button>
+        <button type="button" class="button secondary fitContent">Apply</button>
       </div>
-      <div>
-        <p>Subtotal: $49.80</p>
-        <p>Shipping: $7.24</p>
+      <hr class="divisor" />
+
+      <div class="productsValueDescription">
+        <p class="productsValue">Subtotal: <span>$49.80</span></p>
+        <p class="productsValue">Shipping: <span>$7.24</span></p>
       </div>
-      <div>
-        <p>Total: $59.28</p>
-        <p class="elementsGray">Including $2.24 in taxes</p>
+      <hr class="divisor" />
+
+      <div class="totalValueContainer">
+        <div class="totalValueTitleGroup">
+          <p class="totalValueTitle">Total</p>
+          <p class="elementsGray totalValueTaxes">Including $2.24 in taxes</p>
+        </div>
+        <span class="totalValue">$59.28</span>
       </div>
     </section>
   </body>
